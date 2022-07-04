@@ -10,5 +10,21 @@
 </head>
 <body>
     
+    <div id="root">
+        <button @click="getRandomEmail()">Generate 10 Emails</button>
+
+        <!-- V-IF AGGIUNTA PER BONUS -->
+        <div v-if="randomEmailsArray.length === 10">
+            <ul>
+                <li v-for="email, index in randomEmailsArray">
+                    {{ email }}
+                </li>
+            </ul>
+        </div>
+        <!-- V-IF AGGIUNTA PER BONUS -->
+
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
